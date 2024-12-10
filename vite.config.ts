@@ -29,6 +29,15 @@ export default defineConfig({
           export default { frontmatter, content };
         `;
       }
+    },
+    {
+      name: 'html-transform',
+      transformIndexHtml(html) {
+        return html.replace(
+          '<div id="root"></div>',
+          '<div id="root"><!-- SSG --></div>'
+        )
+      }
     }
   ],
   build: {
