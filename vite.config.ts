@@ -3,8 +3,7 @@ import react from '@vitejs/plugin-react';
 import { promises as fs } from 'fs';
 
 export default defineConfig({
-  plugins: [
-    react(),
+  plugins: [react(),
     {
       name: 'markdown-loader',
       async transform(code, id) {
@@ -33,11 +32,14 @@ export default defineConfig({
   ],
   build: {
     outDir: 'dist',
+    emptyOutDir: true,
     rollupOptions: {
-      input: './src/main.tsx' // or whatever your main entry file is
+      input: {
+        app: './index.html'  // Make sure this points to your root index.html
+      }
     }
   },
   optimizeDeps: {
     exclude: ['lucide-react']
   }
-});
+}); 
