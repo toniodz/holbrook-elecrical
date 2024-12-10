@@ -1,0 +1,128 @@
+:root {
+  /* Major Third ratio: 1.25 */
+  --ratio: 1.25;
+  
+  /* Base sizes */
+  --text-base: clamp(1rem, 0.75vw + 0.8rem, 1.125rem);
+  --space-base: clamp(1rem, 1.5vw, 1.5rem);
+  
+  /* Type scale */
+  --text-xs: calc(var(--text-base) / (var(--ratio) * 1.1));
+  --text-sm: calc(var(--text-base) / var(--ratio));
+  --text-md: var(--text-base);
+  --text-lg: calc(var(--text-base) * var(--ratio));
+  --text-xl: calc(var(--text-base) * (var(--ratio) * 1.5));
+  --text-2xl: calc(var(--text-base) * (var(--ratio) * 2));
+  --text-3xl: calc(var(--text-base) * (var(--ratio) * 2.5));
+  --text-4xl: calc(var(--text-base) * (var(--ratio) * 3));
+  --text-5xl: calc(var(--text-base) * (var(--ratio) * 3.5));
+  --text-6xl: calc(var(--text-base) * (var(--ratio) * 4));
+  --text-7xl: calc(var(--text-base) * (var(--ratio) * 4.5));
+  --text-8xl: clamp(2.5rem, 8vw + 1rem, 5rem); /* Adjusted for better mobile scaling */
+  
+  /* Spacing scale */
+  --space-xs: calc(var(--space-base) / var(--ratio));
+  --space-sm: calc(var(--space-base) / (var(--ratio) * 0.75));
+  --space-md: var(--space-base);
+  --space-lg: calc(var(--space-base) * var(--ratio));
+  --space-xl: calc(var(--space-base) * (var(--ratio) * 1.5));
+  --space-2xl: calc(var(--space-base) * (var(--ratio) * 2));
+  --space-3xl: calc(var(--space-base) * (var(--ratio) * 2.5));
+}
+
+/* Typography utility classes */
+.text-scale-xs { 
+  font-size: var(--text-xs); 
+  line-height: 1.6; 
+  letter-spacing: -0.01em;
+}
+.text-scale-sm { 
+  font-size: var(--text-sm); 
+  line-height: 1.6; 
+  letter-spacing: -0.01em;
+}
+.text-scale-md { 
+  font-size: var(--text-md); 
+  line-height: 1.6; 
+  letter-spacing: -0.01em;
+}
+.text-scale-lg { 
+  font-size: var(--text-lg); 
+  line-height: 1.5; 
+  letter-spacing: -0.02em;
+}
+.text-scale-xl { 
+  font-size: var(--text-xl); 
+  line-height: 1.4; 
+  letter-spacing: -0.02em;
+}
+.text-scale-2xl { 
+  font-size: var(--text-2xl); 
+  line-height: 1.3; 
+  letter-spacing: -0.02em;
+}
+.text-scale-3xl { 
+  font-size: var(--text-3xl); 
+  line-height: 1.2; 
+  letter-spacing: -0.03em;
+}
+.text-scale-4xl { 
+  font-size: var(--text-4xl); 
+  line-height: 1.1; 
+  letter-spacing: -0.03em;
+}
+.text-scale-5xl { 
+  font-size: var(--text-5xl); 
+  line-height: 1.1; 
+  letter-spacing: -0.04em;
+}
+.text-scale-6xl { 
+  font-size: var(--text-6xl); 
+  line-height: 1; 
+  letter-spacing: -0.04em;
+}
+.text-scale-7xl { 
+  font-size: var(--text-7xl); 
+  line-height: 1; 
+  letter-spacing: -0.05em;
+}
+.text-scale-8xl { 
+  font-size: var(--text-8xl); 
+  line-height: 1.1; 
+  letter-spacing: -0.05em;
+}
+
+/* Spacing utility classes */
+.space-scale-xs { padding: var(--space-xs); }
+.space-scale-sm { padding: var(--space-sm); }
+.space-scale-md { padding: var(--space-md); }
+.space-scale-lg { padding: var(--space-lg); }
+.space-scale-xl { padding: var(--space-xl); }
+.space-scale-2xl { padding: var(--space-2xl); }
+.space-scale-3xl { padding: var(--space-3xl); }
+
+/* Margin variants */
+.mt-scale-xs { margin-top: var(--space-xs); }
+.mt-scale-sm { margin-top: var(--space-sm); }
+.mt-scale-md { margin-top: var(--space-md); }
+.mt-scale-lg { margin-top: var(--space-lg); }
+.mt-scale-xl { margin-top: var(--space-xl); }
+.mt-scale-2xl { margin-top: var(--space-2xl); }
+.mt-scale-3xl { margin-top: var(--space-3xl); }
+
+.mb-scale-xs { margin-bottom: var(--space-xs); }
+.mb-scale-sm { margin-bottom: var(--space-sm); }
+.mb-scale-md { margin-bottom: var(--space-md); }
+.mb-scale-lg { margin-bottom: var(--space-lg); }
+.mb-scale-xl { margin-bottom: var(--space-xl); }
+.mb-scale-2xl { margin-bottom: var(--space-2xl); }
+.mb-scale-3xl { margin-bottom: var(--space-3xl); }
+
+/* Gap variants */
+.gap-scale-xs { gap: var(--space-xs); }
+.gap-scale-sm { gap: var(--space-sm); }
+.gap-scale-md { gap: var(--space-md); }
+.gap-scale-lg { gap: var(--space-lg); }
+.gap-scale-xl { gap: var(--space-xl); }
+.gap-scale-2xl { gap: var(--space-2xl); }
+.gap-scale-3xl { gap: var(--space-3xl); }
