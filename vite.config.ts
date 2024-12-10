@@ -1,7 +1,6 @@
 import { defineConfig } from 'vite';
 import react from '@vitejs/plugin-react';
 import { promises as fs } from 'fs';
-import { ssr } from 'vite-plugin-ssr/plugin';
 
 export default defineConfig({
   plugins: [
@@ -30,18 +29,12 @@ export default defineConfig({
           export default { frontmatter, content };
         `;
       }
-    },
-    ssr({
-      prerender: true
-    })
+    }
   ],
   build: {
     outDir: 'dist',
-    ssrManifest: true,
     rollupOptions: {
-      input: {
-        main: './index.html'
-      }
+      input: './src/main.tsx' // or whatever your main entry file is
     }
   },
   optimizeDeps: {
