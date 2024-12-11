@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { Phone } from 'lucide-react';
-import logo from '../assets/images/long.jpg'  // Adjust the path based on your file structure
+import logo from '../../assets/images/long.jpg'  // Adjust the path based on your file structure
 import { Navigation } from './Navigation';
 
 export function Header() {
