@@ -1,16 +1,21 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { Phone } from 'lucide-react';
+import logo from '../assets/images/long.jpg'  // Adjust the path based on your file structure
 import { Navigation } from './Navigation';
 
 export function Header() {
   return (
-    <header className="sticky top-0 z-50 w-full bg-white shadow-md">
-      <div className="container mx-auto px-4 py-4">
-        <div className="flex items-center justify-between">
-          <Link to="/" className="text-2xl font-bold text-blue-900">
-            Holbrook Electrical
-          </Link>
+<header className="sticky top-0 z-50 w-full bg-white shadow-md">
+  <div className="container mx-auto px-4 py-4">
+    <div className="flex items-center justify-between">
+      <Link to="/" className="flex items-center">
+        <img 
+          src={logo} 
+          alt="Holbrook Electrical" 
+          className="h-12 w-auto"  // Adjust height as needed
+        />
+      </Link>
           
           <Navigation />
           
